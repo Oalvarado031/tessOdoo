@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="add_move_form_advisor" model="ir.ui.view">
+      <field name="name">add.move.form</field>
+      <field name="model">account.move</field>
+      <field name="inherit_id" ref="account.view_move_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]" position="after">
+          <field name="sales_advisor_id" domain="[('category_id.name', '=', 'Vendedor')]" />
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
